@@ -1,9 +1,9 @@
 :root {
-    --color-darkest: #5C3D1E;
-    --color-dark: #8B5E3C;
-    --color-mid: #C49A6C;
-    --color-light: #E8D5BC;
-    --color-back: #FAF6F0;
+    --color-darkest: #121619;
+    --color-dark: #4A131E;
+    --color-mid: #A63446;
+    --color-light: #F4CBC6;
+    --color-back: #B3BDB3;
 }
 
 html{
@@ -57,7 +57,7 @@ header a{
     flex-direction: column;
     text-decoration: none;
     font-size: 18px;
-    color: var(--color-back);
+    color: var(--color-light);
 }
 
 .links{
@@ -66,12 +66,12 @@ header a{
 }
 
 header a:hover{
-    color: var(--color-light);
+    color: var(--color-mid);
 
 }
 
 footer a:hover{
-    color: var(--color-light);
+    color: var(--color-mid);
 }
 
 footer {
@@ -103,7 +103,7 @@ footer {
 footer a{
     font-size: 25px;
     text-decoration: none;
-    color: var(--color-back);
+    color: var(--color-light);
 }
 
 
@@ -291,3 +291,29 @@ section {
 .project-card:hover p {
     color: var(--color-light);  /* ← the color it fades TO when card is hovered */
 }
+
+/* Mobile Responsive Layout for Project Cards */
+@media screen and (max-width: 768px) {
+    /* Change from row to column to stack the image on top */
+    .project1image {
+        flex-direction: column;
+        align-items: stretch; /* Allows elements to take full width */
+    }
+
+    /* Remove the left padding so text aligns correctly below the image */
+    .project1image p {
+        padding-left: 0;
+        padding-top: 20px; /* Adds spacing between the image and text */
+    }
+
+    /* Optional: Reduce section padding so cards don't shrink too much on mobile */
+    section {
+        padding: 20px;
+    }
+
+    /* Optional: Reduce large project card padding for smaller screens */
+    .project-card {
+        padding: 20px;
+    }
+}
+
